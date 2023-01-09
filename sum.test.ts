@@ -8,7 +8,8 @@ describe("sum module", () => {
   test("object assignment", () => {
     const data = { one: 1 };
     data["two"] = 2;
-    expect(data).toEqual({ one: 1, two: 2 });
+    expect(data).toStrictEqual({ one: 1, two: 2 }); // object
+    expect(data).toEqual({ one: 1, two: 2 }); // object
   });
 
   test("adding positive numbers is not zero", () => {
